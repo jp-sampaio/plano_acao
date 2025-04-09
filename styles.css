@@ -201,7 +201,7 @@ section {
 }
 
 .card {
-    height: 280px;
+    height: 350px;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -248,7 +248,7 @@ section {
     position: relative;
     z-index: 3;
     width: 100%;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;;
 }
 
 .card:hover .card-info {
@@ -592,8 +592,12 @@ footer {
     }
 
     .logo {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         margin-bottom: 20px;
+        position: absolute; /* Torna a logo fixa no topo */
+        top: 10px; /* Ajusta a distância do topo */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Corrige o deslocamento */
     }
 
     .hero h1 {
@@ -624,6 +628,18 @@ footer {
 
     .service-title {
         font-size: 2.5rem;
+    }
+    
+    .card-description {
+        opacity: 1; /* Garante que a descrição esteja visível */
+        transform: translateY(0); /* Remove qualquer transformação */
+        transition: none; /* Remove a animação */
+    }
+
+    .card:hover .card-description {
+        /* Remove o efeito de hover */
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .btn-saiba-mais {
